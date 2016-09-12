@@ -1,0 +1,381 @@
+/*==========  ESTILOS GLOBALES  ==========*/
+html {
+  font-size: 12px;
+}
+@media (min-width: @screen-lg-min) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: @screen-xs-max) {
+  html {
+    font-size: 12px;
+  }
+}
+body { 
+  font-weight: 400;
+  position:relative;
+  padding-top: @navbar-height;
+}
+html, 
+body { 
+  overflow-x: hidden; 
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.04rem;
+}
+.toTop {
+  display: none;
+  position:fixed;
+  font-size: 40px;
+  right: 16px;
+  bottom: 24px;
+  text-shadow: none;
+  opacity:0.8; 
+  color:#ADADAD;
+}
+.toTop:hover {
+  color:#7A7A7A
+}
+/*==========  EJES TEMÁTICOS  ==========*/
+.cat-bg-@{cat-todos-id} { background: @cat-todos-color; }
+.cat-bg-@{cat-todos-id}:hover,
+a:hover .cat-bg-@{cat-todos-id} { 
+  background: @cat-todos-hover; 
+  transition: background-color .2s linear;
+}
+.cat-bg-@{cat-administracion-id} { background: @cat-administracion-color; }
+.cat-bg-@{cat-administracion-id}:hover,
+a:hover .cat-bg-@{cat-administracion-id} { 
+  background: @cat-administracion-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-marketing-id} { background: @cat-marketing-color; }
+.cat-bg-@{cat-marketing-id}:hover,
+a:hover .cat-bg-@{cat-marketing-id} { 
+  background: @cat-marketing-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-autoayuda-id} { background: @cat-autoayuda-color; }
+.cat-bg-@{cat-autoayuda-id}:hover,
+a:hover .cat-bg-@{cat-autoayuda-id} { 
+  background: @cat-autoayuda-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-ambiente-id} { background: @cat-ambiente-color; }
+.cat-bg-@{cat-ambiente-id}:hover,
+a:hover .cat-bg-@{cat-ambiente-id} { 
+  background: @cat-ambiente-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-contabilidad-id} { background: @cat-contabilidad-color; }
+.cat-bg-@{cat-contabilidad-id}:hover,
+a:hover .cat-bg-@{cat-contabilidad-id} { 
+  background: @cat-contabilidad-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-talento-id} { background: @cat-talento-color; }
+.cat-bg-@{cat-talento-id}:hover,
+a:hover .cat-bg-@{cat-talento-id} { 
+  background: @cat-talento-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-economia-id} { background: @cat-economia-color; }
+.cat-bg-@{cat-economia-id}:hover,
+a:hover .cat-bg-@{cat-economia-id} { 
+  background: @cat-economia-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-tecnologia-id} { background: @cat-tecnologia-color; }
+.cat-bg-@{cat-tecnologia-id}:hover,
+a:hover .cat-bg-@{cat-tecnologia-id} { 
+  background: @cat-tecnologia-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-emprendimiento-id} { background: @cat-emprendimiento-color; }
+.cat-bg-@{cat-emprendimiento-id}:hover,
+a:hover .cat-bg-@{cat-emprendimiento-id} { 
+  background: @cat-emprendimiento-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-otros-id} { background: @cat-otros-color; }
+.cat-bg-@{cat-otros-id}:hover,
+a:hover .cat-bg-@{cat-otros-id} { 
+  background: @cat-otros-hover;
+  transition: background-color .2s linear; 
+}
+.cat-bg-@{cat-finanzas-id} { background: @cat-finanzas-color; }
+.cat-bg-@{cat-finanzas-id}:hover,
+a:hover .cat-bg-@{cat-finanzas-id} { 
+  background: @cat-finanzas-hover;
+  transition: background-color .2s linear; 
+}
+
+.cat-col-@{cat-todos-id} { color: @cat-todos-color; }
+.cat-col-@{cat-todos-id}:hover { 
+  color: @cat-todos-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-administracion-id} { color: @cat-administracion-color; }
+.cat-col-@{cat-administracion-id}:hover { 
+  color: @cat-administracion-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-marketing-id} { color: @cat-marketing-color; }
+.cat-col-@{cat-marketing-id}:hover { 
+  color: @cat-marketing-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-autoayuda-id} { color: @cat-autoayuda-color; }
+.cat-col-@{cat-autoayuda-id}:hover { 
+  color: @cat-autoayuda-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-ambiente-id} { color: @cat-ambiente-color; }
+.cat-col-@{cat-ambiente-id}:hover { 
+  color: @cat-ambiente-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-contabilidad-id} { color: @cat-contabilidad-color; }
+.cat-col-@{cat-contabilidad-id}:hover { 
+  color: @cat-contabilidad-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-talento-id} { color: @cat-talento-color; }
+.cat-col-@{cat-talento-id}:hover { 
+  color: @cat-talento-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-economia-id} { color: @cat-economia-color; }
+.cat-col-@{cat-economia-id}:hover { 
+  color: @cat-economia-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-tecnologia-id} { color: @cat-tecnologia-color; }
+.cat-col-@{cat-tecnologia-id}:hover { 
+  color: @cat-tecnologia-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-emprendimiento-id} { color: @cat-emprendimiento-color; }
+.cat-col-@{cat-emprendimiento-id}:hover { 
+  color: @cat-emprendimiento-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-otros-id} { color: @cat-otros-color; }
+.cat-col-@{cat-otros-id}:hover { 
+  color: @cat-otros-hover;
+  transition: color .2s linear; 
+}
+.cat-col-@{cat-finanzas-id} { color: @cat-finanzas-color; }
+.cat-col-@{cat-finanzas-id}:hover { 
+  color: @cat-finanzas-hover;
+  transition: color .2s linear; 
+}
+
+.icon-cat-@{cat-todos-id}:before { content: @cat-todos-icon; }
+.icon-cat-@{cat-administracion-id}:before { content: @cat-administracion-icon; }
+.icon-cat-@{cat-marketing-id}:before { content: @cat-marketing-icon; }
+.icon-cat-@{cat-autoayuda-id}:before { content: @cat-autoayuda-icon; }
+.icon-cat-@{cat-ambiente-id}:before { content: @cat-ambiente-icon; }
+.icon-cat-@{cat-contabilidad-id}:before { content: @cat-contabilidad-icon; }
+.icon-cat-@{cat-talento-id}:before { content: @cat-talento-icon; }
+.icon-cat-@{cat-economia-id}:before { content: @cat-economia-icon; }
+.icon-cat-@{cat-tecnologia-id}:before { content: @cat-tecnologia-icon; }
+.icon-cat-@{cat-emprendimiento-id}:before { content: @cat-emprendimiento-icon; }
+.icon-cat-@{cat-otros-id}:before { content: @cat-otros-icon; }
+.icon-cat-@{cat-finanzas-id}:before { content: @cat-finanzas-icon; }
+
+/*==========  DROPDOWNS  ==========*/
+.dropdown-menu {
+  background-color: #141414;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color:#f5f5f5;
+  margin: 0;
+  .divider {
+    background-color: #141414;
+    border-bottom: 1px solid #333;
+  }
+  ul {
+    list-style: none;
+    margin: 0 15px 0 16px;
+    padding: 0;
+  }
+}
+.navbar {
+  .nav {
+    & > li {
+      & > .dropdown-menu:before {
+        display: none;
+      }
+      & > .dropdown-menu:after {
+        display: none;
+      }
+    }
+  }
+}
+.dropdown-menu &>li &>a,.dropdown-menu li a {
+  color: #f5f5f5;
+}
+.nav-header {
+  color: #f5f5f5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding:0;
+  text-shadow: none;
+}
+.dropdown {
+  .dropdown-menu {
+    .nav-header {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+//Colores de avatar de autores según inicial
+.author-color {
+  border-radius: 100%;
+  display: inline-block;
+  height:32px;
+  width:32px;
+  font-size:1.125rem;
+  line-height: 32px;
+  text-align:center;
+  color:#fff;
+  text-shadow:none;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.author-color-a {
+  background-color: @a-color;
+}
+.author-color-b {
+  background-color: @b-color;
+}
+.author-color-c {
+  background-color: @c-color;
+}
+.author-color-d {
+  background-color: @d-color;
+}
+.author-color-e {
+  background-color: @e-color;
+}
+.author-color-f {
+  background-color: @f-color;
+}
+.author-color-g {
+  background-color: @g-color;
+}
+.author-color-h {
+  background-color: @h-color;
+}
+.author-color-i {
+  background-color: @i-color;
+}
+.author-color-j {
+  background-color: @j-color;
+}
+.author-color-k {
+  background-color: @k-color;
+}
+.author-color-l {
+  background-color: @l-color;
+}
+.author-color-m {
+  background-color: @m-color;
+}
+.author-color-n {
+  background-color: @n-color;
+}
+.author-color-o {
+  background-color: @o-color;
+}
+.author-color-p {
+  background-color: @p-color;
+}
+.author-color-q {
+  background-color: @q-color;
+}
+.author-color-r {
+  background-color: @r-color;
+}
+.author-color-s {
+  background-color: @s-color;
+}
+.author-color-t {
+  background-color: @t-color;
+}
+.author-color-u {
+  background-color: @u-color;
+}
+.author-color-v {
+  background-color: @v-color;
+}
+.author-color-w {
+  background-color: @w-color;
+}
+.author-color-x {
+  background-color: @x-color;
+}
+.author-color-y {
+  background-color: @y-color;
+}
+.author-color-z {
+  background-color: @z-color;
+}
+.author-color-nn {
+  background-color: @nn-color;
+}
+
+//Colores
+.fb-color{
+  background-color: @facebook-color !important;
+}
+.tw-color{
+  background-color: @twitter-color !important;
+}
+.red{
+  background-color: #F44336 !important;
+}
+.gray{
+  background-color: #858585 !important;
+}
+.vo-color{
+  background-color: @vote-color !important;
+}
+.vo-text-color{
+  color: @vote-color !important;
+}
+.share-color {
+  background-color: #008752 !important;
+}
+.gp-color {
+  background-color: @google-color !important;
+}
+.linkedin-color {
+  background-color: @linkedin-color !important;
+}
+.link404 {
+  display: block;
+}
+.error404 .searchnotf {
+  display: block;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.searchnotf .form-control {
+  border-radius: 0;
+  border-color: #aaa;
+}

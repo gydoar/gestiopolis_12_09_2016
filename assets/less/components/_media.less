@@ -1,0 +1,57 @@
+// Captions
+.wp-caption {
+  &:extend(.thumbnail all);
+}
+
+.wp-caption-text {
+  &:extend(.thumbnail .caption all);
+}
+
+// Gallery shortcode
+.gallery-row {
+  padding: (@line-height-computed / 2) 0;
+}
+
+.img-responsive, 
+.thumbnail>img, 
+.thumbnail a>img, 
+.carousel-inner>.item>img, 
+.carousel-inner>.item>a>img, 
+.wp-caption>img, 
+.wp-caption a>img {
+	width: 100%;
+}
+
+.wp-caption {
+	padding: 1rem !important;
+}
+.wp-caption-text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: @title-font, sans-serif;
+}
+.embed-responsive {
+	margin-bottom:32px;
+}
+.single .container-lazyload {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+.single .container-lazyload .lazyload-info-icon {
+  display:none!important;
+  visibility:hidden!important
+}
+.single .container-lazyload iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}

@@ -1,0 +1,137 @@
+#admanmedia, .adm-intext {
+  margin: 0 auto;
+  text-align:center;
+  display:block;
+}
+.adsfl {
+  float: left;
+  margin: 0 1.5rem 0.5rem 0 !important;
+  padding: 2rem 0 0 0 !important;
+  
+}
+/*@media (min-width: @screen-lg-min) {
+  .adsfl {
+    padding: 2rem 0 0 7rem !important;
+  }
+}
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .adsfl {
+    padding: 2rem 0 0 4rem !important;
+  }
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .adsfl {
+    padding: 2rem 0 0 3rem !important;
+  }
+}*/
+.adsfr {
+  float:right;
+  margin: 0 1.5rem 0.5rem 1.5rem;
+  padding: 2rem 0 0 0 !important;
+}
+.adsce {
+  margin: 1.5rem auto;
+  display:block;
+  text-align:center;
+}
+.category .adsce,
+.tag .adsce {
+  margin-bottom: 0 !important;
+}
+.adsbg {
+  color: @text-color;
+  font-family: @text-font,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+.textad {
+  font-family: @text-font,Helvetica,Arial,sans-serif;
+  color: @text-color;
+  font-size: 0.875rem;
+}
+.titlead {
+  font-family: @title-font,sans-serif;
+  color:@link-color;
+}
+.titlead:hover {
+  color:#002b80;
+}
+.linkad {
+  color: #008000;
+  font-size: 0.875rem;
+  font-weight:700;
+}
+.linkad:hover {
+  color: #008000;
+}
+.goad {
+  width: 336px;
+  margin: 3px 0;
+}
+.single .ad-sidebar {
+  border: 5px solid #edede4;
+  position: fixed;
+  bottom: -400px;
+  width: 229px;
+  z-index: 9999;
+}
+.single .ad-sidebar.off {
+  bottom: -325px;
+}
+.single .ad-sidebar.on {
+  bottom: 10px;
+}
+@media (min-width: @screen-lg-min) {
+  .single .ad-sidebar {
+    width: 304px;
+  }
+  .single .ad-sidebar.off {
+    bottom: -310px;
+  }
+}
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .single .ad-sidebar {
+    width: 229px;
+  }
+  .single .ad-sidebar.off {
+    bottom: -325px;
+  }
+}
+.single .ad-sidebar h3 {
+  padding: 10px;
+  font-family: @title-font, sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  background: #edede4;
+  color:#888;
+}
+.single .ad-sidebar .entry-title {
+  padding: 10px;
+  font-family: @title-font, sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  background: #edede4;
+  line-height: 1.4;
+}
+.single .ad-sidebar .entry-title a {
+  font-family: @title-font, sans-serif;
+  font-size: 1.125rem;
+  margin: 0;
+  color: @headings-color;
+  text-decoration:none;
+}
+.single .ad-sidebar .entry-title a:hover {
+  color: @headings-color;
+}
+.single .ad-sidebar .wrapper-img {
+  height: 171px;
+  overflow: hidden;
+  position: relative;
+}
+.single .ad-sidebar .wrapper-img:hover img {
+  transform: none;
+}
+.single .ad-sidebar .arrow {
+  float: right;
+  cursor: pointer;
+}

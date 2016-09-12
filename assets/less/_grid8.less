@@ -1,0 +1,47 @@
+/*==========  GRID MÁRGEN DE 8px  ==========*/
+@grid8-gutter-width:   8px;
+.make-grid8-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".row.rm8 .col-xs-@{index}, .row.rm8 .col-sm-@{index}, .row.rm8 .col-md-@{index}, .row.rm8 .col-lg-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".row.rm8 .col-xs-@{index}, .row.rm8 .col-sm-@{index}, .row.rm8 .col-md-@{index}, .row.rm8 .col-lg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  (@grid8-gutter-width / 2);
+      padding-right: (@grid8-gutter-width / 2);
+    }
+  }
+  .col(1); // kickstart it
+}
+.container.cm8 {
+  .container-fixed(@grid8-gutter-width);
+
+  @media (min-width: @screen-sm-min) {
+    width: (720px + @grid8-gutter-width);
+  }
+  @media (min-width: @screen-md-min) {
+    width: (940px + @grid8-gutter-width);
+  }
+  @media (min-width: @screen-lg-min) {
+    width: (1240px + @grid8-gutter-width);
+  }
+}
+
+.container-fluid.cm8 {
+  .container-fixed(@grid8-gutter-width);
+}
+
+.row.rm8 {
+  .make-row(@grid8-gutter-width);
+}
+
+.make-grid8-columns();
